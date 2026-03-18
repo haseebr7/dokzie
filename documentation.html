@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docsie - Documentation</title>
+    <link rel="icon" href="docsie_icon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="h-full w-full gradient-bg text-white overflow-auto">
+    <div class="w-full min-h-full">
+        <!-- Navigation -->
+        <nav
+            class="fixed top-0 left-0 right-0 z-50 px-6 py-4 backdrop-blur-md bg-slate-950/90 border-b border-red-600/20">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                    <img src="docsie_icon.ico" class="w-10 h-10 object-contain rounded-xl shadow-lg" alt="Docsie Logo">
+                    <span class="text-xl font-bold text-white">Docsie</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-gray-300 hover:text-red-400 transition-colors">Home</a>
+                    <a href="documentation.html" class="text-red-400">Documentation</a>
+                    <a href="terms.html" class="text-gray-300 hover:text-red-400 transition-colors">Terms</a>
+                    <a href="privacy.html" class="text-gray-300 hover:text-red-400 transition-colors">Privacy</a>
+                </div>
+                <a href="index.html" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium text-white">Back
+                    Home</a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <section class="relative pt-32 pb-20 px-6">
+            <div class="max-w-4xl mx-auto">
+                <!-- TOC -->
+                <div class="glow-card rounded-2xl p-8 mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">Docsie Documentation</h1>
+                    <p class="text-xl text-gray-400 mb-8">Complete user guide and support information</p>
+
+                    <div class="bg-slate-800/50 rounded-lg p-6">
+                        <h2 class="text-lg font-semibold mb-4">Quick Navigation</h2>
+                        <div class="grid md:grid-cols-2 gap-3">
+                            <a href="#getting-started" class="text-red-400 hover:text-red-300">→ Getting Started</a>
+                            <a href="#installation" class="text-red-400 hover:text-red-300">→ Installation</a>
+                            <a href="#features" class="text-red-400 hover:text-red-300">→ Features</a>
+                            <a href="#how-to-use" class="text-red-400 hover:text-red-300">→ How to Use</a>
+                            <a href="#trial" class="text-red-400 hover:text-red-300">→ Trial Version</a>
+                            <a href="#full" class="text-red-400 hover:text-red-300">→ Full Version</a>
+                            <a href="#troubleshooting" class="text-red-400 hover:text-red-300">→ Troubleshooting</a>
+                            <a href="#support" class="text-red-400 hover:text-red-300">→ Support</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Getting Started -->
+                <div class="glow-card rounded-2xl p-8 mb-8" id="getting-started">
+                    <h2 class="text-3xl font-bold mb-6 text-red-400">Getting Started</h2>
+
+                    <h3 class="text-2xl font-semibold mb-4">System Requirements</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300 mb-6">
+                        <li>Operating System: Windows 7 or later</li>
+                        <li>Processor: 1 GHz or faster</li>
+                        <li>RAM: 2 GB minimum</li>
+                        <li>Disk Space: 100 MB for installation</li>
+                        <li>Internet: Required for activation only</li>
+                    </ul>
+                </div>
+
+                <!-- Installation -->
+                <div class="glow-card rounded-2xl p-8 mb-8" id="installation">
+                    <h2 class="text-3xl font-bold mb-6 text-red-400">Installation</h2>
+
+                    <h3 class="text-xl font-semibold mb-3">Step 1: Download</h3>
+                    <p class="text-gray-300 mb-4">Click the "Download Docsie Free" button on the homepage to download
+                        the installer.</p>
+
+                    <h3 class="text-xl font-semibold mb-3">Step 2: Install</h3>
+                    <p class="text-gray-300 mb-4">Run the installer and follow the on-screen instructions. Choose your
+                        installation location and click Install.</p>
+
+                    <h3 class="text-xl font-semibold mb-3">Step 3: Activate</h3>
+                    <p class="text-gray-300">Launch Docsie, enter your email, and select "Start Trial" or enter an
+                        activation code to activate your license.</p>
+                </div>
+
+                <!-- Features -->
+                <div class="glow-card rounded-2xl p-8 mb-8" id="features">
+                    <h2 class="text-3xl font-bold mb-6 text-red-400">Features</h2>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Bulk Word Replacer</h3>
+                            <p class="text-gray-300 mb-2">Find and replace words across multiple files simultaneously
+                                (.docx, .xlsx, .txt, .csv). Includes:</p>
+                            <ul class="list-disc list-inside text-gray-400 text-sm space-y-1 ml-4">
+                                <li><strong>Live Preview</strong> — See all changes file-by-file before applying</li>
+                                <li><strong>Automatic Backup</strong> — Saves originals to a "_backups" folder before
+                                    editing</li>
+                                <li><strong>Similarity Threshold Slider</strong> — Adjustable 10%–100% to catch typos
+                                    and spelling variants</li>
+                                <li><strong>Whole Word Mode</strong> — Prevents partial word matches (ON by default)
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Smart Word Finder</h3>
+                            <p class="text-gray-300 mb-2">A read-only scanner that finds words across all your documents
+                                without modifying anything. Includes:</p>
+                            <ul class="list-disc list-inside text-gray-400 text-sm space-y-1 ml-4">
+                                <li><strong>Deep Scan</strong> — Recursively scans subfolders (Word Finder only)</li>
+                                <li><strong>Similarity Threshold Slider</strong> — Finds similar words and spelling
+                                    variants</li>
+                                <li><strong>Whole Word Matching</strong> — Option to include or exclude substrings</li>
+                                <li><strong>Clean Results</strong> — Only shows files with matches, with exact counts
+                                    and percentages</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Fuzzy Matching (Both Features)</h3>
+                            <p class="text-gray-300">Intelligent similarity detection available in both Replacer and
+                                Finder. Catches typos like "Centre" vs "Center" and "Johanson" vs "Johansson"
+                                automatically.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Backup (Replacer Only)</h3>
+                            <p class="text-gray-300">Automatically saves pristine copies of original files before making
+                                changes. Your data is always safe — you can always revert.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How to Use -->
+                <div class="glow-card rounded-2xl p-8 mb-8" id="how-to-use">
+                    <h2 class="text-3xl font-bold mb-6 text-red-400">How to Use</h2>
+
+                    <div class="space-y-4">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div
+                                    class="flex items-center justify-center h-8 w-8 rounded-md bg-red-600 text-white font-bold">
+                                    1</div>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Select Your Folder</h3>
+                                <p class="text-gray-400">Click Browse or drag-and-drop your folder containing documents.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div
+                                    class="flex items-center justify-center h-8 w-8 rounded-md bg-red-600 text-white font-bold">
+                                    2</div>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Enter Search Terms</h3>
+                                <p class="text-gray-400">Type the word you want to find and the replacement word.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div
+                                    class="flex items-center justify-center h-8 w-8 rounded-md bg-red-600 text-white font-bold">
+                                    3</div>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Preview Changes</h3>
+                                <p class="text-gray-400">Review all proposed changes before applying them.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div
+                                    class="flex items-center justify-center h-8 w-8 rounded-md bg-red-600 text-white font-bold">
+                                    4</div>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Apply Changes</h3>
+                                <p class="text-gray-400">Confirm and let Docsie handle the replacement across all files.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trial Version -->
+                <div class="glow-card rounded-2xl p-8 mb-8" id="trial">
+                    <h2 class="text-3xl font-bold mb-6 text-red-400">Trial Version</h2>
+                    <p class="text-gray-300 mb-4"><strong>Duration:</strong> 7 days free — no credit card, no
+                        auto-renewal</p>
+                    <p class="text-gray-300 mb-4"><strong>All Features:</strong> Full access to both Replacer and Finder
+                    </p>
+                    <p class="text-gray-300 mb-4"><strong>Limitations:</strong></p>
+                    <ul class="list-disc list-inside text-gray-400 text-sm space-y-1 ml-4 mb-4">
+                        <li>Up to 100 replacements</li>
+                        <li>Up to 10 searches</li>
+                        <li>200 files per run</li>
+                    </ul>
+                    <p class="text-gray-300">Want to extend your trial? Email <a href="mailto:team.docsie@gmail.com"
+                            class="text-red-400 hover:text-red-300">team.docsie@gmail.com</a> with subject "Trial
+                        Extension Request" — we almost always say yes.</p>
+                </div>
+
+                <!-- Full Version -->
+                <div class="glow-card rounded-2xl p-8 mb-8" id="full">
+                    <h2 class="text-3xl font-bold mb-6 text-red-400">Full Version</h2>
+                    <p class="text-gray-300 mb-4"><strong>Price:</strong> $37.42 USD (one-time payment)</p>
+                    <p class="text-gray-300 mb-4"><strong>Lifetime License:</strong> Use forever with all updates</p>
+                    <p class="text-gray-300 mb-4"><strong>Unlimited Features:</strong> No restrictions on replacements
+                        or file processing</p>
+                    <p class="text-gray-300 mb-4"><strong>Priority Support:</strong> Fast-track email support</p>
+                    <p class="text-gray-300">Available on <a href="https://docsie.gumroad.com/l/docsie_app"
+                            class="text-red-400 hover:text-red-300" target="_blank">Gumroad</a></p>
+                </div>
+
+                <!-- Supported Formats -->
+                <div class="glow-card rounded-2xl p-8 mb-8">
+                    <h2 class="text-3xl font-bold mb-6 text-red-400">Supported File Formats</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">📄 Word Documents (.docx)</h3>
+                            <p class="text-gray-400">Full text replacement including headers, footers, and tables.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">📊 Excel Files (.xlsx)</h3>
+                            <p class="text-gray-400">Searches all sheets, cells, and maintains formatting.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">📝 Text Files (.txt)</h3>
+                            <p class="text-gray-400">Plain text files with UTF-8 and ANSI support.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">📋 CSV Files (.csv)</h3>
+                            <p class="text-gray-400">Comma-separated values with structure preservation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Troubleshooting -->
+                <div class="glow-card rounded-2xl p-8 mb-8" id="troubleshooting">
+                    <h2 class="text-3xl font-bold mb-6 text-red-400">Troubleshooting</h2>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">❓ Files Not Showing in Folder</h3>
+                            <p class="text-gray-300">Ensure folder contains supported file formats. Check file
+                                permissions and try a different folder.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">❓ Slow Processing Speed</h3>
+                            <p class="text-gray-300">Close unnecessary applications, reduce folder size, or disable
+                                Fuzzy Matching for faster processing.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">❓ Changes Not Applied</h3>
+                            <p class="text-gray-300">Ensure files aren't open in other applications. Try running as
+                                Administrator and check disk space.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support -->
+                <div class="glow-card rounded-2xl p-8 mb-8" id="support">
+                    <h2 class="text-3xl font-bold mb-6 text-red-400">Support & Contact</h2>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">📧 Email Support</h3>
+                            <p class="text-gray-300 mb-2"><a href="mailto:team.docsie@gmail.com"
+                                    class="text-red-400 hover:text-red-300">team.docsie@gmail.com</a></p>
+                            <p class="text-gray-400">Response time: 24-48 hours</p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">🎁 Activation Code Request</h3>
+                            <p class="text-gray-300">Email with subject "Activation Code Request"</p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">⏱️ Trial Extension</h3>
+                            <p class="text-gray-300">Email with subject "Trial Extension Request"</p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">🆘 Technical Support</h3>
+                            <p class="text-gray-300">Describe your issue and we'll help you resolve it</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="glow-card rounded-2xl p-8 mb-8">
+                    <h2 class="text-3xl font-bold mb-6 text-red-400">Frequently Asked Questions</h2>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-semibold mb-2">Q: Is my data secure?</h3>
+                            <p class="text-gray-300">A: Yes. Files are processed 100% locally on your computer. Nothing
+                                is uploaded, transmitted, or stored on any server. Core features work completely
+                                offline.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-2">Q: Does my data ever leave my computer?</h3>
+                            <p class="text-gray-300">A: No. Docsie processes everything locally. The only internet
+                                connection used is for license activation/verification — your actual documents never
+                                touch the network.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-2">Q: What does the Similarity Threshold do?</h3>
+                            <p class="text-gray-300">A: It controls how closely a word must match your search term. At
+                                100%, only exact matches are found. At 85% (default), common variants and typos like
+                                "Centre" vs "Center" are caught. Lower it further to find more distant matches.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-2">Q: What is Deep Scan?</h3>
+                            <p class="text-gray-300">A: Deep Scan (available in Word Finder) recursively searches
+                                through all subfolders of your selected directory. Without it, only files in the
+                                top-level folder are scanned.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-2">Q: Can I use Docsie on multiple computers?</h3>
+                            <p class="text-gray-300">A: Your activation code works on one computer at a time. Contact us
+                                for multi-computer licensing.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-2">Q: What if I lose my activation code?</h3>
+                            <p class="text-gray-300">A: Email us with your registered email and we'll resend it.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="bg-gradient-to-r from-red-600/20 to-red-700/20 rounded-2xl p-8 text-center mb-8">
+                    <h2 class="text-2xl font-bold mb-4">Ready to Get Started?</h2>
+                    <a href="index.html#pricing"
+                        class="btn-primary px-8 py-3 rounded-xl font-semibold text-white inline-block">Choose Your
+                        Plan</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-12 px-6 border-t border-red-600/20">
+            <div class="max-w-7xl mx-auto">
+                <div
+                    class="flex flex-col md:flex-row items-center justify-center gap-6 text-sm border-b border-red-600/20 pb-6 mb-6">
+                    <a href="documentation.html" class="text-red-400 font-semibold">Documentation</a>
+                    <span class="text-gray-600">•</span>
+                    <a href="terms.html" class="text-gray-400 hover:text-red-400 transition-colors">Terms of Service</a>
+                    <span class="text-gray-600">•</span>
+                    <a href="privacy.html" class="text-gray-400 hover:text-red-400 transition-colors">Privacy Policy</a>
+                    <span class="text-gray-600">•</span>
+                    <a href="mailto:team.docsie@gmail.com"
+                        class="text-gray-400 hover:text-red-400 transition-colors">Contact Support</a>
+                </div>
+                <div class="text-center text-gray-500 text-sm">© 2024 Docsie. All rights reserved.</div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

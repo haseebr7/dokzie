@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docsie - Document Control & Maintenance Automation</title>
+    <link rel="icon" href="docsie_icon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="h-full w-full gradient-bg text-white overflow-auto">
+    <div class="w-full min-h-full">
+        <!-- Navigation -->
+        <nav
+            class="fixed top-0 left-0 right-0 z-50 px-6 py-4 backdrop-blur-md bg-slate-950/90 border-b border-red-600/20">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <img src="docsie_icon.ico" class="w-10 h-10 object-contain rounded-xl shadow-lg" alt="Docsie Logo">
+                    <span class="text-xl font-bold text-white">Docsie</span>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#search" class="text-gray-300 hover:text-red-400 transition-colors">Find</a>
+                    <a href="#replace" class="text-gray-300 hover:text-red-400 transition-colors">Fix</a>
+                    <a href="version-history.html"
+                        class="text-gray-300 hover:text-red-400 transition-colors">Versions</a>
+                    <a href="feature-request.html" class="text-gray-300 hover:text-red-400 transition-colors">Request a
+                        Feature</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="contact.html"
+                        class="text-gray-300 hover:text-red-400 transition-colors text-sm font-medium">Contact Us</a>
+                    <button class="btn-primary px-4 py-2 rounded-lg text-sm font-medium text-white"
+                        onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">Get
+                        Started</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 px-6 overflow-hidden">
+            <div class="hero-glow"></div>
+            <div class="max-w-7xl mx-auto text-center relative z-10">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-600/10 border border-red-500/30 text-red-400 text-sm font-semibold mb-8 slide-up">
+                    <span class="relative flex h-3 w-3">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                    </span>
+                    🔥 -53% Founding Member Launch: Exclusive to the first 1000 licenses
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-6 slide-up text-white" style="animation-delay: 0.2s;">
+                    <span class="text-white">Can't find it.</span><br>
+                    <span class="text-red-600">Can't fix it.</span><br>
+                    <span class="text-white text-4xl md:text-5xl font-bold">Docsie does both — instantly.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-2 slide-up"
+                    style="animation-delay: 0.4s;">
+                    Search any word across your entire folder — including every subfolder. Then fix it everywhere in seconds.
+                </p>
+                <p class="text-base text-red-400 font-semibold max-w-xl mx-auto mb-4 slide-up" style="animation-delay: 0.45s;">
+                    Every minute spent hunting through files manually is time you never get back.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10 mb-8 slide-up"
+                    style="animation-delay: 0.6s;">
+                    <button
+                        class="btn-secondary px-8 py-4 rounded-xl text-lg font-medium flex items-center justify-center gap-2"
+                        onclick="document.getElementById('demo-video').scrollIntoView({behavior: 'smooth', block: 'start'})">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Watch a 2-Minute Demo</span>
+                    </button>
+                    <a href="download.html"
+                        class="btn-primary px-8 py-4 rounded-xl text-lg font-semibold text-white flex items-center justify-center gap-2">
+                        <span>Start Free - Save Hours Today 🔥</span>
+                    </a>
+                </div>
+                <p class="text-sm text-yellow-400 font-semibold mt-2 mb-1 slide-up" style="animation-delay: 0.65s;">⚡ Takes less than 2 minutes to see results.</p>
+                <div class="flex flex-col items-center gap-2 slide-up" style="animation-delay: 0.7s;">
+                    <p class="text-sm text-gray-500">Installs securely on Windows. No credit card required.</p>
+                    <div class="flex items-center gap-4 mt-1">
+                        <span class="flex items-center gap-1.5 text-xs text-green-400 font-medium"><span
+                                class="w-2 h-2 rounded-full bg-green-400 inline-block"></span> 100% Local — Files Never
+                            Leave Your PC</span>
+                        <span class="flex items-center gap-1.5 text-xs text-blue-400 font-medium"><span
+                                class="w-2 h-2 rounded-full bg-blue-400 inline-block"></span> No Internet
+                            Required</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Identity / Tribe Section -->
+        <section class="py-16 px-6 border-y border-yellow-500/20 bg-yellow-500/5">
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-yellow-400 text-sm font-bold uppercase tracking-widest mb-3">Built for people who deal with this daily</p>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">If this sounds like you… Docsie is for you.</h2>
+                <p class="text-gray-400 text-lg mb-10">You need to <strong class="text-white">find</strong> something across hundreds of files — or <strong class="text-white">update</strong> the same thing everywhere. Both take forever manually. Docsie handles both in seconds.</p>
+                <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 text-left">
+                    <div class="bg-slate-900/70 border border-slate-700 rounded-xl p-5 hover:border-yellow-500/40 transition-colors">
+                        <div class="text-2xl mb-2">🔍</div>
+                        <p class="text-white font-semibold text-sm">You need to find a specific word buried across hundreds of files and subfolders</p>
+                    </div>
+                    <div class="bg-slate-900/70 border border-slate-700 rounded-xl p-5 hover:border-yellow-500/40 transition-colors">
+                        <div class="text-2xl mb-2">📂</div>
+                        <p class="text-white font-semibold text-sm">You manage large directories with nested folders you can't manually search</p>
+                    </div>
+                    <div class="bg-slate-900/70 border border-slate-700 rounded-xl p-5 hover:border-yellow-500/40 transition-colors">
+                        <div class="text-2xl mb-2">✏️</div>
+                        <p class="text-white font-semibold text-sm">You need to replace or update a term everywhere — without missing a single file</p>
+                    </div>
+                    <div class="bg-slate-900/70 border border-slate-700 rounded-xl p-5 hover:border-yellow-500/40 transition-colors">
+                        <div class="text-2xl mb-2">⏳</div>
+                        <p class="text-white font-semibold text-sm">You've wasted hours opening files one by one just to check or change one thing</p>
+                    </div>
+                </div>
+                <p class="text-gray-500 text-sm mt-6">Used by office workers, legal assistants, school admins, report managers, and developers — anyone managing bulk documents.</p>
+            </div>
+        </section>
+
+        <!-- Demo Video Section -->
+        <section id="demo-video" class="py-12 px-6">
+            <div class="max-w-5xl mx-auto">
+                <!-- Before → After Visual -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                    <div class="flex-1 bg-slate-900/80 border border-red-600/30 rounded-2xl p-6 text-center max-w-xs">
+                        <div class="text-3xl mb-2">😩</div>
+                        <p class="text-gray-400 text-sm font-semibold uppercase tracking-wider mb-1">Without Docsie</p>
+                        <p class="text-white font-bold text-xl">Open. Search. Repeat.</p>
+                        <p class="text-gray-500 text-sm">File by file. Folder by folder. Exhausting.</p>
+                    </div>
+                    <div class="text-4xl font-black text-red-500 select-none">→</div>
+                    <div class="flex-1 bg-green-950/60 border border-green-500/30 rounded-2xl p-6 text-center max-w-xs">
+                        <div class="text-3xl mb-2">😎</div>
+                        <p class="text-green-400 text-sm font-semibold uppercase tracking-wider mb-1">With Docsie</p>
+                        <p class="text-white font-bold text-xl">One search. Every file.</p>
+                        <p class="text-gray-400 text-sm">Entire directories + subfolders. Under 2 minutes.</p>
+                    </div>
+                </div>
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Watch Docsie Save Hours… in Seconds</h2>
+                    <p class="text-gray-400">Built to handle thousands of documents without breaking a sweat — tested on real, messy files.</p>
+                </div>
+                <!-- Video Container -->
+                <div
+                    class="relative w-full aspect-video rounded-3xl overflow-hidden border border-red-600/30 shadow-2xl shadow-red-900/20 mb-16">
+                    <iframe width="100%" height="100%"
+                        src="https://www.youtube.com/embed/yr8M7S9KkJ0?si=hqFG1u3FlUIp5Mzx&amp;start=11"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Feature Gallery -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Feature Image 1 -->
+                    <div class="gallery-item group">
+                        <div
+                            class="rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 mb-4 transition-all group-hover:border-red-600/50">
+                            <img src="Docsie Screenshots & images/Docsie Word finder Result Screenshot.jpg"
+                                alt="Word Finder Results"
+                                class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Instant Search Results</h3>
+                        <p class="text-red-400 text-xs font-semibold mb-1">Find anything across thousands of files in
+                            seconds</p>
+                        <p class="text-gray-400 text-sm">See exactly where every occurrence lives across multiple files
+                            with similarity percentages and context snippets.</p>
+                    </div>
+                    <!-- Feature Image 2 -->
+                    <div class="gallery-item group">
+                        <div
+                            class="rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 mb-4 transition-all group-hover:border-red-600/50">
+                            <img src="Docsie Screenshots & images/Docsie Word finder including subfolders + typos varition detection Screenshot.jpg"
+                                alt="Subfolder Typos Detection"
+                                class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Deep Scan &amp; Typo Detection</h3>
+                        <p class="text-red-400 text-xs font-semibold mb-1">Even finds hidden and messy text others miss
+                        </p>
+                        <p class="text-gray-400 text-sm">Automate your search through thousands of subfolders. Docsie
+                            intelligently finds typos and variations you might miss.</p>
+                    </div>
+                    <!-- Feature Image 3 -->
+                    <div class="gallery-item group">
+                        <div
+                            class="rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 mb-4 transition-all group-hover:border-red-600/50">
+                            <img src="Docsie Screenshots & images/Docsie Word Replacer Result Preview.jpg"
+                                alt="Word Replacer Preview"
+                                class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Surgical Preview</h3>
+                        <p class="text-gray-400 text-sm">Review every single change before applying it. Docsie shows you
+                            exactly what will happen to your documents.</p>
+                    </div>
+                    <!-- Feature Image 4 -->
+                    <div class="gallery-item group">
+                        <div
+                            class="rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 mb-4 transition-all group-hover:border-red-600/50">
+                            <img src="Docsie Screenshots & images/Docsie Word Replacer Result Applied Window.jpg"
+                                alt="Applied Results"
+                                class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Surgical Bulk Replacement</h3>
+                        <p class="text-gray-400 text-sm">Apply hundreds of changes across folders in seconds. Docsie
+                            maintains file integrity while updating every mention accurately.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The "Two Options" Contrast Section -->
+        <section class="py-24 px-6 border-y border-red-600/20">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 text-white text-center">You Have Two Options</h2>
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <!-- Option A: The Mess -->
+                    <div class="glow-card rounded-2xl p-8 border border-slate-800 bg-slate-950/40">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-500">Option A: Keep Doing It Manually</h3>
+                        <ul class="space-y-4 text-gray-500">
+                            <li class="flex items-center gap-3">
+                                <span class="text-red-500 font-bold">✗</span>
+                                <span>Open each file one by one</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-red-500 font-bold">✗</span>
+                                <span>Ctrl+H, replace, save, close, repeat</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-red-500 font-bold">✗</span>
+                                <span>Hope you didn't miss anything</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-red-500 font-bold">✗</span>
+                                <span>Spend days on what should take seconds</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-red-500 font-bold">✗</span>
+                                <span>Risk your reputation on human error</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Option B: Docsie -->
+                    <div class="pricing-popular rounded-2xl p-8 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-red-600/5 pointer-events-none"></div>
+                        <h3 class="text-2xl font-bold mb-6 text-red-400">Option B: Let Docsie Handle It</h3>
+                        <ul class="space-y-4 text-gray-200">
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span>One folder. One click. Every file handled.</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span>Preview everything before a single change</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span>Automatic backups — can't break anything</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span>Deep scan finds words you'd never catch</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span>100% local, 100% private, 100% under your control</span>
+                            </li>
+                        </ul>
+                        <div class="mt-8">
+                            <a href="download.html"
+                                class="btn-primary w-full py-4 rounded-xl font-bold text-center block text-white shadow-xl shadow-red-600/10">
+                                Choose Option B — Download Free Trial
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p class="text-lg text-red-400 font-semibold mb-6 italic">Manual document work isn’t productivity… it’s wasted life.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature 1: Deep Document Search -->
+        <section id="search" class="py-24 px-6 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="feature-icon w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-7 h-7 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                        <h2 class="text-4xl font-bold mb-6 text-white text-left">Find Information Instantly</h2>
+                        <p class="text-xl text-gray-300 mb-6 text-left leading-relaxed">
+                            Searching manually through files is slow and unreliable. Docsie acts like <strong>Google
+                                Search for your local documents</strong>, scanning entire folders and subfolders to
+                            locate exactly where a word or phrase appears.
+                        </p>
+                        <ul class="space-y-4 text-gray-400">
+                            <li class="flex items-center gap-3">
+                                <span class="text-red-500">✦</span>
+                                <span><strong>Know Exactly Where Information Lives</strong>: Scans body text, tables,
+                                    headers, and footers.</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-red-500">✦</span>
+                                <span><strong>Deep Document Search</strong>: Dives into every nested subfolder to find
+                                    terms buried deep in your archives.</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-red-500">✦</span>
+                                <span><strong>Intelligence</strong>: Finds "fuzzy" variations and typos so you never
+                                    miss a match.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="glow-card rounded-2xl p-6 bg-slate-950 font-mono text-sm border-slate-700">
+                        <div class="text-green-400">🚀 Searching 500 files for "XYZ Client"...</div>
+                        <div class="text-gray-500 mt-2">Checking subfolders (recursive)...</div>
+                        <div class="mt-4 text-success">🟢 📄 contracts/2024/client_a.docx → 3 occurrences</div>
+                        <div class="text-exact ml-6">✔ XYZ Client (100%) ×3</div>
+                        <div class="mt-2 text-success">🟢 📊 finance/reports/Q3_ledger.xlsx → 1 occurrence</div>
+                        <div class="text-fuzzy ml-6">~ XYZ Cliant (92%) ×1</div>
+                        <div class="mt-4 border-t border-slate-800 pt-2 text-gray-400">✅ Search complete in 1.2s. 4
+                            matches found.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature 2: Smart Word Replacer -->
+        <section id="replace" class="py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1 glow-card rounded-2xl p-8 bg-slate-950 border-slate-700">
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3 bg-red-600/10 p-3 rounded-lg border border-red-600/20">
+                                <span class="text-red-400 font-mono text-xs">FIND</span>
+                                <span class="text-gray-300 font-medium">Acme Global Ltd</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-3 bg-green-600/10 p-3 rounded-lg border border-green-600/20">
+                                <span class="text-green-400 font-mono text-xs">REPLACE</span>
+                                <span class="text-gray-300 font-medium">Apex International</span>
+                            </div>
+                            <div class="mt-6 space-y-2">
+                                <div class="text-yellow-400 text-sm">⚠️ Ready to apply 42 changes.</div>
+                                <div class="bg-white/5 p-3 rounded text-xs text-gray-400">
+                                    📄 Legal/Contract_v4.docx (12 changes pending)<br>
+                                    📄 Legal/Contract_v5.docx (15 changes pending)<br>
+                                    📊 Sales/Q4_Sheet.xlsx (15 changes pending)
+                                </div>
+                                <button class="w-full btn-primary py-2 rounded font-bold text-white mt-4">Confirm &
+                                    Replace Everywhere</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <div class="feature-icon w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-7 h-7 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h2 class="text-4xl font-bold mb-6 text-white text-left">Fix Everything in Seconds</h2>
+                        <p class="text-xl text-gray-300 mb-6 text-left leading-relaxed">
+                            Update names, terms, or phrases across all your files automatically. Docsie makes document
+                            maintenance surgical and safe.
+                        </p>
+                        <ul class="space-y-4 text-gray-400">
+                            <li class="flex items-center gap-3">
+                                <span class="text-red-500">✦</span>
+                                <span><strong>Two-Phase Approval</strong>: Always see a preview of every proposed change
+                                    before a single file is touched.</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-red-500">✦</span>
+                                <span><strong>Automatic Safety Net</strong>: Pristine backups are created automatically.
+                                    You can't break anything.</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-red-500">✦</span>
+                                <span><strong>Clean, Deterministic Edits</strong>: Works inside complex MS Word
+                                    paragraphs and Excel cells without breaking them.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The "Because" CTA -->
+        <section class="py-20 px-6 bg-red-600/5">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-3 text-white">Still doing this manually?</h2>
+                <p class="text-red-400 font-semibold text-lg mb-2">You're wasting hours every week — and you know it.</p>
+                <p class="text-lg text-gray-300 mb-8">
+                    Start your trial today <span class="font-bold text-red-400">because every hour spent on manual updates is an hour you'll never get back.</span>
+                </p>
+                <a href="download.html"
+                    class="btn-primary px-10 py-4 rounded-xl text-lg font-semibold text-white inline-flex items-center justify-center gap-2">
+                    Try Docsie Free &mdash; Fix Your Documents in Minutes
+                </a>
+                <p class="text-gray-500 text-sm mt-4">If you work with multiple documents… Docsie is for you. ⚡ Takes less than 2 minutes to see results.</p>
+            </div>
+        </section>
+
+        <!-- Supported Formats -->
+        <section class="py-24 px-6 border-t border-red-600/20">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold mb-4 text-white">Full Control Over All Standard Formats</h2>
+                    <p class="text-gray-400">Docsie works surgically inside the files you use every day.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                    <div class="glow-card rounded-2xl p-8 text-center border-slate-800">
+                        <div class="text-5xl mb-4">📄</div>
+                        <div class="text-xl font-semibold">.docx</div>
+                        <div class="text-gray-400 text-sm">Word Documents</div>
+                    </div>
+                    <div class="glow-card rounded-2xl p-8 text-center border-slate-800">
+                        <div class="text-5xl mb-4">📊</div>
+                        <div class="text-xl font-semibold">.xlsx</div>
+                        <div class="text-gray-400 text-sm">Excel Sheets</div>
+                    </div>
+                    <div class="glow-card rounded-2xl p-8 text-center border-slate-800">
+                        <div class="text-5xl mb-4">📝</div>
+                        <div class="text-xl font-semibold">.txt</div>
+                        <div class="text-gray-400 text-sm">Plain Text</div>
+                    </div>
+                    <div class="glow-card rounded-2xl p-8 text-center border-slate-800">
+                        <div class="text-5xl mb-4">📋</div>
+                        <div class="text-xl font-semibold">.csv</div>
+                        <div class="text-gray-400 text-sm">Spreadsheets</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing" class="py-24 px-6 bg-slate-900/50">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-3 text-white">Simple, Honest Pricing</h2>
+                <p class="text-gray-400 mb-10 text-lg">Stop wasting hours — <span
+                        class="text-red-400 font-semibold">this pays for itself in 1 use.</span></p>
+                <div class="grid md:grid-cols-2 gap-8 text-left">
+                    <div class="glow-card rounded-2xl p-8 border border-slate-700">
+                        <h3 class="text-2xl font-bold text-white mb-2">Free Trial</h3>
+                        <p class="text-4xl font-bold mb-1">$0</p>
+                        <p class="text-gray-400 mb-6">7 days — no commitment.</p>
+                        <ul class="space-y-3 mb-8 text-gray-300">
+                            <li>✓ All features unlocked</li>
+                            <li>✓ Deep scan & Fuzzy matching</li>
+                            <li>✓ No credit card required</li>
+                        </ul>
+                        <a href="download.html"
+                            class="btn-secondary w-full py-4 rounded-xl font-semibold text-center block">
+                            Download Trial
+                        </a>
+                    </div>
+                    <div class="pricing-popular rounded-2xl p-8 border border-red-600/30">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-red-400">Lifetime Access</h3>
+                            <span
+                                class="bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded-full animate-pulse">-53%
+                                OFF</span>
+                        </div>
+                        <div class="flex items-end gap-2 mb-1">
+                            <p class="text-4xl font-bold">$37.42</p>
+                            <p class="text-lg text-gray-500 line-through mb-1">$80</p>
+                        </div>
+                        <p class="text-gray-400 mb-2">One-time payment — yours forever.</p>
+                        <p class="text-red-400 text-sm font-semibold mb-4">⚡ Limited to first 1,000 users · Lifetime
+                            deal ends soon</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="text-xs bg-green-500/10 border border-green-500/30 text-green-400 px-2.5 py-1 rounded-full">✓
+                                100% Local</span>
+                            <span
+                                class="text-xs bg-blue-500/10 border border-blue-500/30 text-blue-400 px-2.5 py-1 rounded-full">✓
+                                No Internet Required</span>
+                            <span
+                                class="text-xs bg-red-500/10 border border-red-500/30 text-red-400 px-2.5 py-1 rounded-full">✓
+                                Files Never Leave Your PC</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-gray-200">
+                            <li>✓ Unlimited document maintenance</li>
+                            <li>✓ Priority support access</li>
+                            <li>✓ All future updates included</li>
+                        </ul>
+                        <a href="https://docsie.gumroad.com/l/docsie_app"
+                            class="btn-primary w-full py-4 rounded-xl font-semibold text-center block text-white"
+                            target="_blank">
+                            Get Permanent Access
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-12 px-6 border-t border-slate-800 bg-slate-950">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="flex items-center gap-2">
+                    <img src="docsie_icon.ico" class="w-8 h-8 rounded-lg" alt="Docsie">
+                    <span class="text-lg font-bold text-gray-300">Docsie</span>
+                    <span class="text-xs text-gray-600 ml-2">v1.0</span>
+                </div>
+                <div class="flex gap-8 text-sm text-gray-500">
+                    <a href="version-history.html" class="hover:text-red-400 transition-colors">Version History</a>
+                    <a href="feature-request.html" class="hover:text-red-400 transition-colors">Feature Request</a>
+                    <a href="contact.html" class="hover:text-red-400 transition-colors">Contact Support</a>
+                    <a href="privacy.html" class="hover:text-red-400 transition-colors">Privacy</a>
+                </div>
+                <div class="text-sm text-gray-500">© 2025 Docsie. All rights reserved.</div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Support - Docsie</title>
+    <link rel="icon" href="docsie_icon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="h-full w-full gradient-bg text-white overflow-auto">
+    <div class="w-full min-h-full">
+        <!-- Navigation -->
+        <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4 backdrop-blur-md bg-slate-950/90 border-b border-red-600/20">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <img src="docsie_icon.ico" class="w-10 h-10 object-contain rounded-xl shadow-lg" alt="Docsie Logo">
+                    <span class="text-xl font-bold text-white">Docsie</span>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html#search" class="text-gray-300 hover:text-red-400 transition-colors">Find</a>
+                    <a href="index.html#replace" class="text-gray-300 hover:text-red-400 transition-colors">Fix</a>
+                    <a href="version-history.html" class="text-gray-300 hover:text-red-400 transition-colors">Versions</a>
+                    <a href="feature-request.html" class="text-gray-300 hover:text-red-400 transition-colors">Request a Feature</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button class="btn-primary px-4 py-2 rounded-lg text-sm font-medium text-white" onclick="window.location.href='index.html#pricing'">Get Started</button>
+                </div>
+            </div>
+        </nav>
+
+        <section class="pt-32 pb-20 px-6">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-white">Contact Us</h1>
+                    <p class="text-xl text-gray-400 italic">"A Real Human Answers Your Emails"</p>
+                </div>
+
+                <div class="glow-card rounded-2xl p-8 md:p-10 border border-slate-700">
+                    <form action="https://formspree.io/f/meerlajr" method="POST" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Your Name</label>
+                                <input type="text" name="name" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
+                                <input type="email" name="_replyto" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Subject</label>
+                            <select name="subject" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors">
+                                <option value="General Support">General Support</option>
+                                <option value="Activation Issue">Activation Issue</option>
+                                <option value="Trial Extension">Trial Extension Request</option>
+                                <option value="Feedback">Feedback</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">How can we help you?</label>
+                            <textarea name="message" rows="6" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary w-full py-4 rounded-xl font-bold text-lg text-white">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="mt-12 text-center text-gray-500">
+                    <p>Alternatively, reach us directly at:</p>
+                    <a href="mailto:team.docsie@gmail.com" class="text-red-400 font-semibold hover:text-red-300 transition-colors">team.docsie@gmail.com</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-12 px-6 border-t border-slate-800 bg-slate-950">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="flex items-center gap-2">
+                    <img src="docsie_icon.ico" class="w-8 h-8 rounded-lg" alt="Docsie">
+                    <span class="text-lg font-bold text-gray-300">Docsie</span>
+                </div>
+                <div class="flex gap-8 text-sm text-gray-500">
+                    <a href="index.html" class="hover:text-red-400 transition-colors">Home</a>
+                    <a href="version-history.html" class="hover:text-red-400 transition-colors">Version History</a>
+                    <a href="feature-request.html" class="hover:text-red-400 transition-colors">Feature Request</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
